@@ -12,7 +12,7 @@ const slackTasks = require("./routes/slackTasksList");
  * App Variables
  */
 const app = express();
-const port = process.env.PORT || "8000";
+const port = process.env.PORT || "3000";
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 /**
