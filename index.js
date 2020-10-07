@@ -7,6 +7,7 @@
 const express = require("express");
 const path = require("path");
 const slackTasks = require("./routes/slackTasksList");
+const amcslack = require("./routes/slackamc");
 
 /**
  * App Variables
@@ -27,6 +28,8 @@ app.get("/", (req, res) => {
 });
 
 app.use('/slackTasks', slackTasks);
+
+app.use('/amcslack', amcslack);
 
 
 /**
