@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 var tokenMaker = require('basic-auth-token');
 
 
-
 router.post('/', function (req, res) {
 	console.log(req.body)
 	 res.send(req.body);

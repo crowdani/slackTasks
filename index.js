@@ -8,6 +8,9 @@ const express = require("express");
 const path = require("path");
 const slackTasks = require("./routes/slackTasksList");
 const amcslack = require("./routes/slackamc");
+var bodyParser = require('body-parser');
+
+
 
 /**
  * App Variables
@@ -23,6 +26,9 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 /**
  * Routes Definitions
  */
+
+app.use(express.json()); //Used to parse JSON bodies
+
 app.get("/", (req, res) => {
   res.status(200).send("WHATABYTE: Food For Devs");
 });
