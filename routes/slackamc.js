@@ -7,10 +7,10 @@ var tokenMaker = require('basic-auth-token');
 
 router.post('/', function (req, res) {
 	console.log(req.body.payload.properties)
-	 console.log(req.body.payload)
+	 console.log(req.body)
 	 console.log('Hello ' + process.env.slackurl)
 
-	 
+
 	var data = JSON.stringify({"text":"Hello, World!"});
 	var config = {
   		method: 'post',
@@ -20,7 +20,7 @@ router.post('/', function (req, res) {
   		},
   		data : data
 	};
-console.log('Hello ' + process.env.NAME)
+
 
 	axios(config).then(function (response) {
 			res.send(req.body);
