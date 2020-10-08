@@ -8,17 +8,19 @@ var tokenMaker = require('basic-auth-token');
 router.post('/', function (req, res) {
 	console.log(req.body.payload.properties)
 	 console.log(req.body.payload)
+	 console.log('Hello ' + process.env.slackurl)
 
+	 
 	var data = JSON.stringify({"text":"Hello, World!"});
 	var config = {
   		method: 'post',
-  		url: 'https://hooks.slack.com/services/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',
+  		url: process.env.slackurl,
   		headers: { 
     		'Content-Type': 'application/json'
   		},
   		data : data
 	};
-
+console.log('Hello ' + process.env.NAME)
 
 	axios(config).then(function (response) {
 			res.send(req.body);
