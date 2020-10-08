@@ -19,7 +19,7 @@ router.post('/', function (req, res) {
 payloadData = req.body
 let myheader = req.headers.host
 console.log(myheader);
-	var data = JSON.stringify({"text": "https://" + myheader + sampledata.payload.attachment_url});
+	var data = JSON.stringify({"text": "https://" + myheader + payloadData.payload.attachment_url});
 	var config = {
   		method: 'post',
   		url: process.env.slackurl,
