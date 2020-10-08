@@ -33,10 +33,13 @@ app.get("/", (req, res) => {
   res.status(200).send("WHATABYTE: Food For Devs");
 });
 
+
+
 app.use('/slackTasks', slackTasks);
 
 app.use('/amcslack', amcslack);
 
+app.use('/static', express.static('/data'))
 
 /**
  * Server Activation
