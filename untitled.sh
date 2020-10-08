@@ -50,6 +50,12 @@ spec:
         app: $NAME
     spec:
       containers:
+      - resources: {}
+        name: ibm-baw-slack-task-list
+        env:
+          - name: slackurl
+            value: >-
+              https://hooks.slack.com/services/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
       - name: $NAME
         image: $IMAGE
         imagePullPolicy: IfNotPresent

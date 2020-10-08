@@ -39,7 +39,7 @@ app.use('/slackTasks', slackTasks);
 
 app.use('/amcslack', amcslack);
 
-app.use('/static', express.static('/data'))
+app.use('/uploads', express.static('/data'))
 
 /**
  * Server Activation
